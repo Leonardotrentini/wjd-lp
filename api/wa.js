@@ -4,7 +4,7 @@
  */
 const LINKS = [
   "https://wa.me/5547997551198?text=Ol%C3%A1%2C%20quero%20comprar%20toalhas%20em%20ATACADO!%20",
-  "https://wa.me/5547997027389?text=Ol%C3%A1%2C%20quero%20comprar%20toalhas%20no%20ATACADO!",
+  "https://wa.me/554799926812?text=Ol%C3%A1%2C%20quero%20comprar%20toalhas%20no%20ATACADO!",
   "https://wa.me/5547997551198?text=Ol%C3%A1%2C%20quero%20comprar%20toalhas%20no%20ATACADO!",
 ];
 
