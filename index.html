@@ -6,15 +6,26 @@
   <title>WJD Textil – Cama, Mesa e Banho</title>
   <link rel="dns-prefetch" href="https://wjdtextil.com" />
   <link rel="dns-prefetch" href="https://connect.facebook.net" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://wjdtextil.com/wp-content/uploads/2025/03/W-J-D-1-150x150.png" as="image" fetchpriority="high" />
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600;700&family=Roboto:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="https://wjdtextil.com/wp-content/uploads/2025/03/W-J-D-1-150x150.png" sizes="32x32" />
+  <link rel="preload" href="/hero-texture.webp" as="image" fetchpriority="high" />
+  <style>
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;font-size:1rem;line-height:1.6;color:#2b2b2b;background:#fff}
+    .hero{position:relative;padding:60px 0;background-color:#d8ded9;background-image:linear-gradient(145deg,rgba(220,227,221,.88) 0%,rgba(184,196,186,.82) 42%,rgba(238,241,238,.9) 100%),url(/hero-texture.webp);background-size:auto,cover;background-position:center,center;background-repeat:no-repeat}
+    .hero__overlay{position:absolute;inset:0;background:rgba(255,255,255,.35);pointer-events:none}
+    .wrap{max-width:1020px;margin:0 auto;padding:0 1.25rem}
+    .hero__inner{position:relative;display:grid;gap:2rem;align-items:center}
+    h1{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-weight:600;color:#2c2c2c;font-size:clamp(1.5rem,4vw,3rem);line-height:1.2;letter-spacing:-.5px;margin:0 0 .75rem}
+    .hero__brand img{display:block;max-width:150px;width:150px;height:150px}
+    .hero__lead{font-family:system-ui,sans-serif;font-size:clamp(1rem,2vw,1.25rem);font-weight:600;color:#444648;margin:0 0 1.25rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:12px 24px;border-radius:30px;font-family:system-ui,sans-serif;font-weight:600;font-size:1rem;text-decoration:none;border:1px solid transparent;color:#fff;background:#24aa3f}
+    @media (max-width:767px){.hero__inner{justify-items:center;text-align:center}.hero__copy{display:flex;flex-direction:column;align-items:center;width:100%;max-width:28rem}.hero__copy .btn{width:100%;max-width:20rem;justify-content:center}}
+  </style>
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="styles.css" /></noscript>
+  <link rel="icon" href="/logo.webp" type="image/webp" sizes="32x32" />
 </head>
 <body>
-  <!-- Ícones SVG (substitui Font Awesome ~80KB+) -->
   <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute;overflow:hidden;clip:rect(0,0,0,0)">
     <defs>
       <symbol id="ico-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
@@ -26,12 +37,11 @@
       <symbol id="ico-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></symbol>
     </defs>
   </svg>
-
   <header class="hero">
     <div class="hero__overlay"></div>
     <div class="wrap hero__inner">
       <div class="hero__brand">
-        <img src="https://wjdtextil.com/wp-content/uploads/2025/03/W-J-D-1-150x150.png" width="150" height="150" alt="WJD Textil" fetchpriority="high" decoding="async" />
+        <img src="/logo.webp" width="150" height="150" alt="WJD Textil" fetchpriority="high" decoding="async" />
       </div>
       <div class="hero__copy">
         <h1>Toalhas de Qualidade no Atacado!</h1>
@@ -89,10 +99,18 @@
         <p class="section__subtitle">E escolha as melhores toalhas para o seu negócio!</p>
         <div class="carousel" role="region" aria-label="Catálogo">
           <div class="carousel__track">
-            <div class="carousel__slide" style="--img:url('https://wjdtextil.com/wp-content/uploads/2025/03/75.jpg')"></div>
-            <div class="carousel__slide" style="--img:url('https://wjdtextil.com/wp-content/uploads/2025/03/77.jpg')"></div>
-            <div class="carousel__slide" style="--img:url('https://wjdtextil.com/wp-content/uploads/2025/03/76.jpg')"></div>
-            <div class="carousel__slide" style="--img:url('https://wjdtextil.com/wp-content/uploads/2025/03/78.jpg')"></div>
+            <div class="carousel__slide">
+              <img class="carousel__img" src="https://wjdtextil.com/wp-content/uploads/2025/03/75-300x300.jpg" srcset="https://wjdtextil.com/wp-content/uploads/2025/03/75-300x300.jpg 300w, https://wjdtextil.com/wp-content/uploads/2025/03/75-768x768.jpg 768w" sizes="(max-width: 768px) 92vw, 720px" width="768" height="768" alt="Catálogo de toalhas" loading="lazy" decoding="async" fetchpriority="low" />
+            </div>
+            <div class="carousel__slide">
+              <img class="carousel__img" src="https://wjdtextil.com/wp-content/uploads/2025/03/77-300x300.jpg" srcset="https://wjdtextil.com/wp-content/uploads/2025/03/77-300x300.jpg 300w, https://wjdtextil.com/wp-content/uploads/2025/03/77-768x768.jpg 768w" sizes="(max-width: 768px) 92vw, 720px" width="768" height="768" alt="Catálogo de toalhas" loading="lazy" decoding="async" fetchpriority="low" />
+            </div>
+            <div class="carousel__slide">
+              <img class="carousel__img" src="https://wjdtextil.com/wp-content/uploads/2025/03/76-300x300.jpg" srcset="https://wjdtextil.com/wp-content/uploads/2025/03/76-300x300.jpg 300w, https://wjdtextil.com/wp-content/uploads/2025/03/76-768x768.jpg 768w" sizes="(max-width: 768px) 92vw, 720px" width="768" height="768" alt="Catálogo de toalhas" loading="lazy" decoding="async" fetchpriority="low" />
+            </div>
+            <div class="carousel__slide">
+              <img class="carousel__img" src="https://wjdtextil.com/wp-content/uploads/2025/03/78-300x300.jpg" srcset="https://wjdtextil.com/wp-content/uploads/2025/03/78-300x300.jpg 300w, https://wjdtextil.com/wp-content/uploads/2025/03/78-768x768.jpg 768w" sizes="(max-width: 768px) 92vw, 720px" width="768" height="768" alt="Catálogo de toalhas" loading="lazy" decoding="async" fetchpriority="low" />
+            </div>
           </div>
         </div>
         <a class="btn btn--wa" href="/api/wa" rel="noopener noreferrer">
@@ -199,18 +217,28 @@
     </div>
   </footer>
   <script src="lead-router.js" defer></script>
-  <!-- Meta Pixel: no fim do body para não bloquear parsing do HTML -->
+  <!-- Meta Pixel: após idle para não competir com LCP/FCP -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1616147640070629');
-  fbq('track', 'PageView');
+  (function () {
+    function loadFbq() {
+      if (window.fbq) return;
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1616147640070629');
+      fbq('track', 'PageView');
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadFbq, { timeout: 5000 });
+    } else {
+      window.addEventListener('load', loadFbq, { once: true });
+    }
+  })();
   </script>
   <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1616147640070629&ev=PageView&noscript=1"
