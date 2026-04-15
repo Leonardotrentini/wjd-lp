@@ -1,0 +1,455 @@
+:root {
+  --text: #2b2b2b;
+  --heading: #2c2c2c;
+  --muted: #444648;
+  --accent: #96aa9f;
+  --wa: #24aa3f;
+  --white: #fff;
+  --max: 1020px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--white);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Mulish", system-ui, sans-serif;
+  font-weight: 600;
+  color: var(--heading);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  letter-spacing: -0.5px;
+  margin: 0 0 0.75rem;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  letter-spacing: -0.5px;
+  margin: 0 0 1rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--wa);
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  padding: 60px 0;
+  background: #ddd url("https://wjdtextil.com/wp-content/uploads/2025/03/Design-sem-nome-9.png") center / cover no-repeat;
+  background-attachment: fixed;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: #ddd;
+  opacity: 0.75;
+  mix-blend-mode: darken;
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .hero__inner {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 28rem;
+  }
+
+  .hero__copy .btn {
+    width: 100%;
+    max-width: 20rem;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__inner {
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
+    text-align: initial;
+  }
+
+  .hero__copy {
+    display: block;
+    width: auto;
+    max-width: none;
+  }
+
+  .hero__copy .btn {
+    width: auto;
+    max-width: none;
+  }
+}
+
+.hero__brand img {
+  display: block;
+  max-width: 150px;
+}
+
+@media (min-width: 768px) {
+  .hero__brand img {
+    margin: 0;
+  }
+}
+
+.hero__lead {
+  font-family: "Mulish", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid transparent;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(36, 170, 63, 0.35);
+}
+
+.btn--wa {
+  background: var(--wa);
+  color: var(--white);
+}
+
+.btn--wa i {
+  font-size: 1.25rem;
+}
+
+/* Sections */
+.section {
+  padding: 60px 0;
+}
+
+.section--light {
+  background: #fafafa;
+}
+
+.section--accent {
+  background: var(--accent);
+  position: relative;
+}
+
+.section--accent .section__title,
+.section--accent .section__subtitle {
+  color: var(--heading);
+}
+
+.section--white {
+  background: var(--white);
+}
+
+.section__title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section__title--left {
+  text-align: left;
+}
+
+.section__subtitle {
+  font-size: 1.2rem;
+  margin: -1rem 0 2rem;
+}
+
+/* Features */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid--3 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+.feature__icon {
+  flex-shrink: 0;
+  color: var(--accent);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.feature h3 {
+  margin-bottom: 0.35rem;
+}
+
+.feature p {
+  font-size: 0.875rem;
+  margin: 0;
+  color: var(--text);
+}
+
+@media (max-width: 767px) {
+  .feature {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* Carousel */
+.carousel {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #f3f3f3;
+}
+
+.carousel__track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 0;
+}
+
+.carousel__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  height: min(72vw, 380px);
+  background: #eee var(--img) center / cover no-repeat;
+}
+
+/* Split about */
+.split {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.split__media img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.split__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Steps */
+.steps__intro {
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 700;
+  color: var(--heading);
+  max-width: 52rem;
+  margin: -0.5rem auto 2.5rem;
+}
+
+.grid--4 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.step {
+  text-align: left;
+}
+
+.step__num {
+  display: block;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--heading);
+  margin-bottom: 0.5rem;
+}
+
+.step h3 {
+  margin-bottom: 0.35rem;
+}
+
+.step p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Testimonials */
+.testimonials {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.testimonial {
+  padding: 1.25rem 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.testimonial header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.testimonial cite {
+  font-style: normal;
+  font-size: 0.95rem;
+}
+
+.testimonial cite span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
+}
+
+.testimonial__star {
+  color: var(--accent);
+}
+
+.testimonial p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Final CTA */
+.section--cta {
+  position: relative;
+  padding: 60px 0;
+  background: #ddd url("https://wjdtextil.com/wp-content/uploads/2025/03/Design-sem-nome-9.png") center / cover no-repeat;
+}
+
+.hero__overlay--soft {
+  opacity: 0.55;
+  mix-blend-mode: multiply;
+}
+
+.cta__content {
+  position: relative;
+}
+
+.cta__content h2 {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta__content p {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--muted);
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  padding: 1.5rem 0;
+  background: var(--heading);
+  color: #ccc;
+  font-size: 0.8rem;
+}
+
+.footer a {
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .hero,
+  .section--cta {
+    background-attachment: scroll;
+  }
+}
