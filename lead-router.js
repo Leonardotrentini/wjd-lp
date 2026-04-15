@@ -1,4 +1,5 @@
 (function () {
+  var WA_PATH = "wa.php";
   var STORAGE_KEY = "wa_rr_client_index";
 
   function nextClientIndex(len) {
@@ -15,11 +16,11 @@
     if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
 
     var a = e.currentTarget;
-    if (!a || a.getAttribute("href") !== "/api/wa") return;
+    if (!a || a.getAttribute("href") !== WA_PATH) return;
 
     e.preventDefault();
 
-    fetch("/api/wa?format=json", { cache: "no-store" })
+    fetch(WA_PATH + "?format=json", { cache: "no-store" })
       .then(function (r) {
         return r.json();
       })
@@ -32,11 +33,11 @@
         window.location.assign(url);
       })
       .catch(function () {
-        window.location.assign("/api/wa");
+        window.location.assign(WA_PATH);
       });
   }
 
-  document.querySelectorAll('a[href="/api/wa"]').forEach(function (el) {
+  document.querySelectorAll('a[href="' + WA_PATH + '"]').forEach(function (el) {
     el.addEventListener("click", onClick);
   });
 })();

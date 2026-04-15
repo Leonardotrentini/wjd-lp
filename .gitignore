@@ -4,3 +4,6 @@ node_modules/
 *.log
 .env
 .env.*
+
+# contador gerado em runtime (PHP)
+data/wa_counter.txt

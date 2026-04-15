@@ -1,6 +1,6 @@
 /**
- * Sequência 1 → 2 → 3 → 1 … entre TODOS os visitantes: Redis (Upstash) + INCR.
- * Sem Redis: GET /api/wa redireciona para o 1.º link; com JS, lead-router alterna no browser.
+ * Vercel / Node: sequência global com Redis (Upstash) + INCR.
+ * Hosting só PHP: usa wa.php na raiz (contador em ficheiro + flock).
  */
 const LINKS = [
   "https://wa.me/5547997551198?text=Ol%C3%A1%2C%20quero%20comprar%20toalhas%20em%20ATACADO!%20",
