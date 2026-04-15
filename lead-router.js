@@ -1,5 +1,6 @@
 (function () {
-  var WA_PATH = "wa.php";
+  /** Na Vercel usa /api/wa (Node). Em hosting só PHP, troca para "wa.php". */
+  var WA_PATH = "/api/wa";
   var STORAGE_KEY = "wa_rr_client_index";
 
   function nextClientIndex(len) {
