@@ -1,5 +1,8 @@
 {
   "name": "tw-lp",
   "private": true,
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@upstash/redis": "^1.37.0"
+  }
 }
